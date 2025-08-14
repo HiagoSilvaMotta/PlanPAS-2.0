@@ -1,0 +1,405 @@
+  (:action ligar_esteira
+    :parameters (esteira)
+    :precondition
+      (and
+        (not
+          (ligado esteira)
+        )
+      )
+    :effect
+      (and
+        (ligado esteira)
+      )
+  )
+  (:action extende_atuador
+    :parameters (esteira atuador_simples1 inicio box1 item0 peqmet1)
+    :precondition
+      (and
+        (type item0 peqmet1)
+        (ligado esteira)
+        (not
+          (extended atuador_simples1)
+        )
+        (at item0 inicio)
+        (not
+          (blocked esteira)
+        )
+        (link atuador_simples1 box1)
+      )
+    :effect
+      (and
+        (at item0 box1)
+        (not
+          (at item0 inicio)
+        )
+        (extended atuador_simples1)
+        (s_fimdecurso atuador_simples1)
+        (blocked esteira)
+      )
+  )
+  (:action retrai_atuador
+    :parameters (esteira atuador_simples1)
+    :precondition
+      (and
+        (s_fimdecurso atuador_simples1)
+        (extended atuador_simples1)
+        (blocked esteira)
+      )
+    :effect
+      (and
+        (not
+          (extended atuador_simples1)
+        )
+        (not
+          (s_fimdecurso atuador_simples1)
+        )
+        (not
+          (blocked esteira)
+        )
+      )
+  )
+  (:action extende_atuador
+    :parameters (esteira atuador_duplo1 inicio box3 item1 peqmet1)
+    :precondition
+      (and
+        (type item1 peqmet1)
+        (ligado esteira)
+        (not
+          (extended atuador_duplo1)
+        )
+        (at item1 inicio)
+        (not
+          (blocked esteira)
+        )
+        (link atuador_duplo1 box3)
+      )
+    :effect
+      (and
+        (at item1 box3)
+        (not
+          (at item1 inicio)
+        )
+        (extended atuador_duplo1)
+        (s_fimdecurso atuador_duplo1)
+        (blocked esteira)
+      )
+  )
+  (:action retrai_atuador
+    :parameters (esteira atuador_duplo1)
+    :precondition
+      (and
+        (s_fimdecurso atuador_duplo1)
+        (extended atuador_duplo1)
+        (blocked esteira)
+      )
+    :effect
+      (and
+        (not
+          (extended atuador_duplo1)
+        )
+        (not
+          (s_fimdecurso atuador_duplo1)
+        )
+        (not
+          (blocked esteira)
+        )
+      )
+  )
+  (:action extende_atuador
+    :parameters (esteira atuador_simples1 inicio box1 item2 medmet1)
+    :precondition
+      (and
+        (type item2 medmet1)
+        (ligado esteira)
+        (not
+          (extended atuador_simples1)
+        )
+        (at item2 inicio)
+        (not
+          (blocked esteira)
+        )
+        (link atuador_simples1 box1)
+      )
+    :effect
+      (and
+        (at item2 box1)
+        (not
+          (at item2 inicio)
+        )
+        (extended atuador_simples1)
+        (s_fimdecurso atuador_simples1)
+        (blocked esteira)
+      )
+  )
+  (:action retrai_atuador
+    :parameters (esteira atuador_simples1)
+    :precondition
+      (and
+        (s_fimdecurso atuador_simples1)
+        (extended atuador_simples1)
+        (blocked esteira)
+      )
+    :effect
+      (and
+        (not
+          (extended atuador_simples1)
+        )
+        (not
+          (s_fimdecurso atuador_simples1)
+        )
+        (not
+          (blocked esteira)
+        )
+      )
+  )
+  (:action extende_atuador
+    :parameters (esteira atuador_simples1 inicio box1 item3 medmet1)
+    :precondition
+      (and
+        (type item3 medmet1)
+        (ligado esteira)
+        (not
+          (extended atuador_simples1)
+        )
+        (at item3 inicio)
+        (not
+          (blocked esteira)
+        )
+        (link atuador_simples1 box1)
+      )
+    :effect
+      (and
+        (at item3 box1)
+        (not
+          (at item3 inicio)
+        )
+        (extended atuador_simples1)
+        (s_fimdecurso atuador_simples1)
+        (blocked esteira)
+      )
+  )
+  (:action retrai_atuador
+    :parameters (esteira atuador_simples1)
+    :precondition
+      (and
+        (s_fimdecurso atuador_simples1)
+        (extended atuador_simples1)
+        (blocked esteira)
+      )
+    :effect
+      (and
+        (not
+          (extended atuador_simples1)
+        )
+        (not
+          (s_fimdecurso atuador_simples1)
+        )
+        (not
+          (blocked esteira)
+        )
+      )
+  )
+  (:action extende_atuador
+    :parameters (esteira atuador_simples2 inicio box2 item4 medmet1)
+    :precondition
+      (and
+        (type item4 medmet1)
+        (ligado esteira)
+        (not
+          (extended atuador_simples2)
+        )
+        (at item4 inicio)
+        (not
+          (blocked esteira)
+        )
+        (link atuador_simples2 box2)
+      )
+    :effect
+      (and
+        (at item4 box2)
+        (not
+          (at item4 inicio)
+        )
+        (extended atuador_simples2)
+        (s_fimdecurso atuador_simples2)
+        (blocked esteira)
+      )
+  )
+  (:action retrai_atuador
+    :parameters (esteira atuador_simples2)
+    :precondition
+      (and
+        (s_fimdecurso atuador_simples2)
+        (extended atuador_simples2)
+        (blocked esteira)
+      )
+    :effect
+      (and
+        (not
+          (extended atuador_simples2)
+        )
+        (not
+          (s_fimdecurso atuador_simples2)
+        )
+        (not
+          (blocked esteira)
+        )
+      )
+  )
+  (:action extende_atuador
+    :parameters (esteira atuador_simples2 inicio box2 item5 medmet1)
+    :precondition
+      (and
+        (type item5 medmet1)
+        (ligado esteira)
+        (not
+          (extended atuador_simples2)
+        )
+        (at item5 inicio)
+        (not
+          (blocked esteira)
+        )
+        (link atuador_simples2 box2)
+      )
+    :effect
+      (and
+        (at item5 box2)
+        (not
+          (at item5 inicio)
+        )
+        (extended atuador_simples2)
+        (s_fimdecurso atuador_simples2)
+        (blocked esteira)
+      )
+  )
+  (:action retrai_atuador
+    :parameters (esteira atuador_simples2)
+    :precondition
+      (and
+        (s_fimdecurso atuador_simples2)
+        (extended atuador_simples2)
+        (blocked esteira)
+      )
+    :effect
+      (and
+        (not
+          (extended atuador_simples2)
+        )
+        (not
+          (s_fimdecurso atuador_simples2)
+        )
+        (not
+          (blocked esteira)
+        )
+      )
+  )
+  (:action extende_atuador
+    :parameters (esteira atuador_duplo1 inicio box3 item6 grdmet1)
+    :precondition
+      (and
+        (type item6 grdmet1)
+        (ligado esteira)
+        (not
+          (extended atuador_duplo1)
+        )
+        (at item6 inicio)
+        (not
+          (blocked esteira)
+        )
+        (link atuador_duplo1 box3)
+      )
+    :effect
+      (and
+        (at item6 box3)
+        (not
+          (at item6 inicio)
+        )
+        (extended atuador_duplo1)
+        (s_fimdecurso atuador_duplo1)
+        (blocked esteira)
+      )
+  )
+  (:action retrai_atuador
+    :parameters (esteira atuador_duplo1)
+    :precondition
+      (and
+        (s_fimdecurso atuador_duplo1)
+        (extended atuador_duplo1)
+        (blocked esteira)
+      )
+    :effect
+      (and
+        (not
+          (extended atuador_duplo1)
+        )
+        (not
+          (s_fimdecurso atuador_duplo1)
+        )
+        (not
+          (blocked esteira)
+        )
+      )
+  )
+  (:action extende_atuador
+    :parameters (esteira atuador_duplo1 inicio box3 item7 grdmet1)
+    :precondition
+      (and
+        (type item7 grdmet1)
+        (ligado esteira)
+        (not
+          (extended atuador_duplo1)
+        )
+        (at item7 inicio)
+        (not
+          (blocked esteira)
+        )
+        (link atuador_duplo1 box3)
+      )
+    :effect
+      (and
+        (at item7 box3)
+        (not
+          (at item7 inicio)
+        )
+        (extended atuador_duplo1)
+        (s_fimdecurso atuador_duplo1)
+        (blocked esteira)
+      )
+  )
+  (:action retrai_atuador
+    :parameters (esteira atuador_duplo1)
+    :precondition
+      (and
+        (s_fimdecurso atuador_duplo1)
+        (extended atuador_duplo1)
+        (blocked esteira)
+      )
+    :effect
+      (and
+        (not
+          (extended atuador_duplo1)
+        )
+        (not
+          (s_fimdecurso atuador_duplo1)
+        )
+        (not
+          (blocked esteira)
+        )
+      )
+  )
+  (:action desligar_esteira
+    :parameters (esteira)
+    :precondition
+      (and
+        (not
+          (blocked esteira)
+        )
+        (ligado esteira)
+      )
+    :effect
+      (and
+        (not
+          (ligado esteira)
+        )
+      )
+  )
